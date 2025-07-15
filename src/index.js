@@ -6,42 +6,42 @@ const pizzaData = [
   {
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
-    price: 6,
+    price: 110,
     photoName: "pizzas/focaccia.jpg",
     soldOut: true, // This pizza is sold out
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozarella",
-    price: 10,
+    price: 115,
     photoName: "pizzas/margherita.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Spinaci",
     ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
-    price: 12,
+    price: 125,
     photoName: "pizzas/spinaci.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Funghi",
     ingredients: "Tomato, mozarella, mushrooms, and onion",
-    price: 12,
+    price: 145,
     photoName: "pizzas/funghi.jpg",
     soldOut: true, // This pizza is sold out
   },
   {
     name: "Pizza Salamino",
     ingredients: "Tomato, mozarella, and pepperoni",
-    price: 15,
+    price: 155,
     photoName: "pizzas/salamino.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Prosciutto",
     ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
-    price: 18,
+    price: 145,
     photoName: "pizzas/prosciutto.jpg",
     soldOut: false,
   },
@@ -131,10 +131,12 @@ function Pizza({ pizzaObj }) {
         {/* {pizzaObj.soldOut ? (
           <span>SOLD OUT</span>
         ) : (
-          <span>{pizzaObj.price}</span> 
+          <span>{"R " + pizzaObj.price}</span>
         )} */}
 
-        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
+        <span>
+          {pizzaObj.soldOut ? "SOLD OUT" : "R " + pizzaObj.price + ".00"}
+        </span>
       </div>
     </li>
   );
